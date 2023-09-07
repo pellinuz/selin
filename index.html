@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Heart</title>
+</head>
+
+<body>
+	<div class="heart-container">
+		<div class="heart"></div>
+		<div class="text">Selin :3</div>
+		<div class="text2">
+			<span class="text3 hidden">I</span>
+			<span class="text4 hidden">LOVE</span>
+			<span class="text5 hidden">YOU</span>
+			<span class="text6 hidden">:3</span>
+		</div>
+	</div>
+</body>
+<script>
+	const text3 = document.querySelector('.text3');
+	const text4 = document.querySelector('.text4');
+	const text5 = document.querySelector('.text5');
+	const text6 = document.querySelector('.text6');
+
+	const heart = document.querySelector('.heart');
+	heart.addEventListener('animationend', () => {
+		text3.classList.remove('hidden');
+		text3.classList.add('visible');
+	});
+
+	text3.addEventListener('animationend', () => {
+		text4.classList.remove('hidden');
+		text4.classList.add('visible');
+	});
+
+	text4.addEventListener('animationend', () => {
+		text5.classList.remove('hidden');
+		text5.classList.add('visible');
+	});
+
+	text5.addEventListener('animationend', () => {
+		text6.classList.remove('hidden');
+		text6.classList.add('visible');
+	});
+</script>
+
+
+</html>
