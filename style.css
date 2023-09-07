@@ -1,0 +1,90 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	margin: 0;
+	background-color: #f0f0f0;
+}
+
+.heart-container {
+	position: relative;
+	text-align: center;
+}
+
+.heart {
+	position: absolute;
+	width: 100px;
+	height: 90px;
+	background: url('heart.png') no-repeat center;
+	background-size: contain;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	animation: explode 2s ease-in-out 1 forwards;
+}
+
+.text {
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 850%;
+	font-weight: bold;
+	opacity: 0;
+	animation: fade-in 5s ease-in-out 1 forwards;
+}
+
+.text1 {
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 850%;
+	font-weight: bold;
+	opacity: 0;
+	animation: fade-in 5s ease-in-out 1 forwards;
+}
+
+.hidden {
+	opacity: 0;
+}
+  
+.text3, .text4, .text5, .text6 {
+	animation: none;
+}
+  
+.visible {
+	animation: fade-in 1s ease-in-out forwards;
+}
+  
+@keyframes explode {
+	0% {
+	  width: 100px;
+	  height: 90px;
+	  transform: translate(-50%, -50%);
+	}
+  
+	50% {
+	  width: 2000px;
+	  height: 1800px;
+	  transform: translate(-50%, -50%);
+	}
+  
+	100% {
+	  width: 0;
+	  height: 0;
+	  opacity: 0;
+	}
+}
+  
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
